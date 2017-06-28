@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Flikr</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div class="container" ng-controller="flickrCtrl" >
+      <div class="container">
+          <h1>{{data.title}}</h1>
+          <div class="search">
+              <input type="text" placeholder="search" ng-model="search">
+              <select ng-model="criteria">
+                  <option selected value="author">username</option>
+                  <option value="title">title</option>
+                  <option value="tags">tags</option>
+              </select>
+              <button type="button" class="btn btn-success" ng-click="searchFlickr(criteria)">Search</button>
+          </div>
+      </div>
+
+
+      <div class="container search-results">
+          <div class="row">
+              <div ng-repeat="project in foundItems"class="col-sm-6 col-md-4">
+                  <div class="card">
+                      <div class="img-wrapper">
+                          <img ng-src="{{project.media.m}}">
+                      </div>
+
+                      <div class="details">
+                          <span class="title"><a ng-href="{{project.link}}" target="_blank">{{project.title}}</a> by <a ng-href="https://www.flickr.com/people/{{project.author_id}}" target="_blank">{{project.author}}</a></span>
+                          <p class="tags">Tags: <i>{{project.tags}}</i></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="container">
+          <div class="seperator"></div>
+
+                <div class="row">
+                    <div ng-repeat="project in data.items" class="col-sm-6 col-md-4">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img ng-src="{{project.media.m}}">
+                            </div>
+
+                            <div class="details">
+                                <span class="title"><a ng-href="{{project.link}}" target="_blank">{{project.title}}</a> by <a ng-href="https://www.flickr.com/people/{{project.author_id}}" target="_blank">{{project.author}}</a></span>
+                                <p class="tags">Tags: <i>{{project.tags}}</i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </div>
+  </body>
+</html>

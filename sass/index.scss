@@ -1,0 +1,44 @@
+img {
+    max-width: 100%;
+}
+
+input,
+select {
+    margin-right: 10px;
+    height: 33px;
+}
+
+.seperator {
+    padding: 20px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .card {
+        box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.15);
+        background-color: #fff;
+        margin-top: 15px;
+        text-align: center;
+        overflow: hidden;
+
+        .img-wrapper {
+            padding-top: 20px;
+            height: 160px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .details {
+            padding: 10px;
+        }
+
+    }
+}

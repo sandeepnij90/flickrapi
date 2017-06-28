@@ -1,0 +1,47 @@
+/* line 1, ../sass/index.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 5, ../sass/index.scss */
+input,
+select {
+  margin-right: 10px;
+  height: 33px;
+}
+
+/* line 11, ../sass/index.scss */
+.seperator {
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+/* line 16, ../sass/index.scss */
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+/* line 20, ../sass/index.scss */
+.container li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 25, ../sass/index.scss */
+.container .card {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  margin-top: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 32, ../sass/index.scss */
+.container .card .img-wrapper {
+  padding-top: 20px;
+  height: 160px;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 39, ../sass/index.scss */
+.container .card .details {
+  padding: 10px;
+}
